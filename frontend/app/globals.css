@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Project Color Codes */
+  --primary: #e10a06;
+  --secondary: #fc7107;
+  --accent: #0abd22;
+  --foreground: #0d132c;
+  --foreground-muted: #5e657e;
+  --background: #fdfdfe;
+  --background-alt: #f6f7fb;
+  --border: #e2e5ec;
+  --surface: #ffffff;
+}
+
+.dark {
+  --foreground: #f1f3f9;
+  --foreground-muted: #9aa1b8;
+  --background: #090d16;
+  --background-alt: #0f1523;
+  --border: #1e2638;
+  --surface: #131b2e;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}

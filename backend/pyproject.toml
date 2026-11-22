@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backend"
+version = "0.1.0"
+description = "A SwiftPY web application"
+requires-python = ">=3.12"
+dependencies = [
+    "swiftpy-framework>=0.3.0",
+    "uvicorn[standard]>=0.52.4",
+    "asyncpg>=0.30.0",
+    "redis>=8.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "mypy>=2.3.1",
+    "ruff>=0.16.4",
+]
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+include = ["app*", "config*", "database*", "routes*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
+explicit_package_bases = true
+follow_imports = "silent"
+ignore_missing_imports = true
