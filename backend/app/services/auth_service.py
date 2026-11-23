@@ -3,8 +3,16 @@ from __future__ import annotations
 from typing import Any
 
 from swiftpy import Request, Response, verify_password_async
+from swiftpy import auth
 from app.repositories.user_repository import UserRepository
-from swiftpy.auth import AuthenticationError, JWTIssuer, TokenBlacklist, require_jwt
+from swiftpy.auth import (
+    auth,
+    AuthenticationError,
+    JWTError,
+    JWTIssuer,
+    TokenBlacklist,
+    require_jwt,
+)
 
 
 class AuthService:
@@ -33,17 +41,41 @@ class AuthService:
                 "email": user.email,
                 "is_admin": user.is_admin,
             },
+            refresh_claims={
+                "email": user.email,
+                "is_admin": user.is_admin,
+            },
         )
         return {
             **tokens,
             "user": user.to_dict(),  # omits "password" via User.__hidden__
         }
+
+    async def refresh(self, refresh_token: str) -> dict[str, Any]:
+        try:
+            # user = auth().user()
+
+            # user = await self.users.find_by_id(user.id())
+            # if user is None:
+            #     raise AuthenticationError("Invalid refresh token.")
+
+            # current_claims = {
+            #     "email": user.email,
+            #     "is_admin": user.is_admin,
+            # }
+            # tokens = await self.jwt.refresh_token_pair(
+            #     refresh_token,
+            #     claims=current_claims,
+            #     refresh_claims=current_claims,
+            #     rotate=True,
+            # )
+            tokens = await JWTIssuer.refresh_token_pair(refresh_token=refresh_token, rotate=True)
+    # return json_response(tokens)
+
+            return {
+                **tokens,
+                # "user": user.to_dict(),
+            }
+        except JWTError as exc:
+            raise AuthenticationError("Invalid or expired refresh token.") from exc
         
-    async def logout(self, request: Request) -> Response:
-        payload = await require_jwt(request, issuer=self.jwt, token_type="access")
-        jti = payload.get("jti")
-        if jti is None:
-            raise AuthenticationError("Invalid token: missing JTI claim.")
-        # Add the JTI to the blacklist
-        await TokenBlacklist.add(jti)
-        return {"message": "Successfully logged out."}

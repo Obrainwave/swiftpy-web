@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default function AdminDocsPage() {
-  return <div>Admin Docs</div>;
+  redirect("/admin/docs/versions");
 }

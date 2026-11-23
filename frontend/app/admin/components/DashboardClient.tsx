@@ -10,7 +10,7 @@ import {
   SparklesIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-} from "../components/utils/Icons";
+} from "../../components/utils/Icons";
 
 export default function DashboardPage() {
   const [carouselIndex, setCarouselIndex] = useState(0);

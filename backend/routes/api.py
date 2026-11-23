@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from swiftpy.auth import auth, JWTIssuer
 from swiftpy.http.request import Request
 from swiftpy.http.response import Response, json_response
 from swiftpy.http.router import RouteGroup, Router
@@ -27,12 +26,7 @@ def register_auth_routes(group: RouteGroup) -> None:
         return success("Successfully logged in", data)
 
     @group.post("/refresh")
-    async def refresh(payload: RefreshRequest, jwt: JWTIssuer) -> Response:
-        tokens = await jwt.refresh_token_pair(payload.refresh_token, rotate=True)
-        
-        data = {
-            **tokens,
-            "user": auth().user()
-        }
+    async def refresh(payload: RefreshRequest, service: AuthService) -> Response:
+        data = await service.refresh(payload.refresh_token)
 
         return success("Successfully refreshed tokens", data)

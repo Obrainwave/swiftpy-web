@@ -1,4 +1,4 @@
-import DashboardClient from "./DashboardClient";
+import DashboardClient from "./components/DashboardClient";
 
 export const instant = false;
 

@@ -5,7 +5,7 @@ import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import { ThemeProvider } from "./components/utils/ThemeProvider";
 import AuthInitializer from "./components/AuthInitializer";
-import QueryProvider from "./components/QueryProvider";
+import QueryProvider from "./providers/QueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

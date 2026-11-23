@@ -1,13 +1,11 @@
 from __future__ import annotations
 
 from swiftpy import Request
-from swiftpy.auth import auth, JWTGuard
+from swiftpy.auth import JWTGuard
 from swiftpy.http.exceptions import HttpException
 from swiftpy.http.response import Response
 from swiftpy.http.router import RouteGroup, Router
-from swiftpy.filesystem import UploadedFile
 
-from app.services.admin.account_service import AccountService
 from app.services.admin.doc_version_service import DocVersionService
 from app.services.admin.doc_group_service import DocGroupService
 from app.http.handler.exceptions import ServerInternalException
@@ -21,18 +19,58 @@ from app.http.requests.admin.doc_request import (
 )
 from app.services.admin.doc_service import DocService
 from app.http.middleware.admin_middleware import AdminMiddleware
+from app.http.controllers.admin.account_controller import AccountController
+from app.http.controllers.admin.blog_controller import BlogController
 from app.helpers.helpers import success
 
-router = Router(prefix="/v1/admin/", middleware=[JWTGuard, AdminMiddleware])
+router = Router(prefix="/v1/admin", middleware=[JWTGuard, AdminMiddleware])
 
 
-@router.group("/account")
-def register_account_routes(group: RouteGroup) -> Response:
-    @group.get("/profile")
-    async def profile() -> Response:
-        admin = auth().user()
+router.get("/account/profile", AccountController.profile)
 
-        return success("Admin profile fetched successfully", admin)
+
+@router.group("/blog")
+def register_blog_routes(group: RouteGroup) -> None:
+    category_body_limit = 3 * 1024 * 1024
+    post_body_limit = 5 * 1024 * 1024
+
+    group.get("/categories", BlogController.categories)
+    group.get("/categories/{category_id}", BlogController.get_category)
+    group.post(
+        "/categories/create",
+        BlogController.create_category,
+        max_body_size=category_body_limit,
+        max_content_length=category_body_limit,
+    )
+    group.put(
+        "/categories/{category_id}/update",
+        BlogController.update_category,
+        max_body_size=category_body_limit,
+        max_content_length=category_body_limit,
+    )
+    group.delete("/categories/{category_id}/delete", BlogController.delete_category)
+
+    group.get("/posts", BlogController.posts)
+    group.get("/posts/{post_id}", BlogController.get_post)
+    group.post(
+        "/posts/create",
+        BlogController.create_post,
+        max_body_size=post_body_limit,
+        max_content_length=post_body_limit,
+    )
+    group.put(
+        "/posts/{post_id}/update",
+        BlogController.update_post,
+        max_body_size=post_body_limit,
+        max_content_length=post_body_limit,
+    )
+    group.delete("/posts/{post_id}/delete", BlogController.delete_post)
+
+    group.get("/comments", BlogController.comments)
+    group.get("/comments/{comment_id}", BlogController.get_comment)
+    group.post("/comments/create", BlogController.create_comment)
+    group.put("/comments/{comment_id}/update", BlogController.update_comment)
+    group.delete("/comments/{comment_id}/delete", BlogController.delete_comment)
 
 
 @router.group("/docs")

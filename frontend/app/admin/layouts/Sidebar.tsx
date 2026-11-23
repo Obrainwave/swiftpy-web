@@ -5,13 +5,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
-  CartIcon,
-  FileTextIcon,
-  LockIcon,
-  ListIcon,
-  BanIcon,
-  TagIcon,
-  ExternalLinkIcon,
+  ChartColumn,
+  CircleUserRound,
+  FileText,
+  FolderTree,
+  GitBranch,
+  Info,
+  KeyRound,
+  LayoutDashboard,
+  MessageSquare,
+  Newspaper,
+  Settings,
+  Tags,
+  Users,
+} from "lucide-react";
+import {
   ChevronDownIcon,
   XIcon,
 } from "../../components/utils/Icons";
@@ -52,14 +60,14 @@ const NAV_SECTIONS: NavSection[] = [
       {
         name: "Dashboard",
         href: "/admin",
-        icon: CartIcon,
+        icon: LayoutDashboard,
         exact: true,
         primary: true,
       },
       {
         name: "Analytics",
         href: "/admin/analytics",
-        icon: CartIcon,
+        icon: ChartColumn,
         exact: true,
         primary: true,
       },
@@ -70,7 +78,7 @@ const NAV_SECTIONS: NavSection[] = [
     items: [
       {
         name: "Users",
-        icon: FileTextIcon,
+        icon: Users,
         children: [
           { name: "Users", href: "/admin/users" },
           { name: "Admins", href: "/admin/admins" },
@@ -79,7 +87,7 @@ const NAV_SECTIONS: NavSection[] = [
       {
         name: "Roles & Permissions",
         href: "/admin/rbac",
-        icon: TagIcon,
+        icon: KeyRound,
         active: false,
       },
     ]
@@ -90,19 +98,19 @@ const NAV_SECTIONS: NavSection[] = [
       {
         name: "Versions",
         href: "/admin/docs/versions",
-        icon: TagIcon,
+        icon: GitBranch,
         active: false,
       },
       {
         name: "Groups",
         href: "/admin/docs/groups",
-        icon: ExternalLinkIcon,
+        icon: FolderTree,
         active: true,
       },
       {
         name: "Contents",
         href: "/admin/docs/contents",
-        icon: FileTextIcon,
+        icon: FileText,
         active: false,
       },
     ],
@@ -113,19 +121,19 @@ const NAV_SECTIONS: NavSection[] = [
       {
         name: "Blog Categories",
         href: "/admin/blog/categories",
-        icon: TagIcon,
+        icon: Tags,
         active: false,
       },
       {
         name: "Blog Posts",
         href: "/admin/blog/posts",
-        icon: ExternalLinkIcon,
+        icon: Newspaper,
         active: true,
       },
       {
         name: "Blog Comments",
         href: "/admin/blog/comments",
-        icon: FileTextIcon,
+        icon: MessageSquare,
         active: false,
       },
     ],
@@ -136,19 +144,19 @@ const NAV_SECTIONS: NavSection[] = [
       {
         name: "Profile",
         href: "/admin/account/profile",
-        icon: TagIcon,
+        icon: CircleUserRound,
         active: false,
       },
       {
         name: "Settings",
         href: "/admin/account/settings",
-        icon: ExternalLinkIcon,
+        icon: Settings,
         active: true,
       },
       {
         name: "System Info",
         href: "/admin/account/system",
-        icon: FileTextIcon,
+        icon: Info,
         active: false,
       },
     ],

@@ -1,0 +1,709 @@
+2026-11-21 07:14:58,214 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-21 07:15:27,694 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 50, in create_version
+    version = await service.create_doc_version(form.validated())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_version_service.py", line 40, in create_doc_version
+    version = await self.version.create_doc_version(payload)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_version_repository.py", line 21, in create_doc_version
+    return await self.model.create(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 1641, in create
+    row = await cls.query().insert_returning(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 655, in insert_returning
+    return await self.builder.insert_returning(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1416, in insert_returning
+    row = await conn.fetchrow(sql, *values)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 775, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 197, in bind_execute
+asyncpg.exceptions.NotNullViolationError: null value in column "sort_order" of relation "doc_versions" violates not-null constraint
+DETAIL:  Failing row contains (5, 1.x.x.7, version-1.x.x.8, This is the first version coo, t, 1, 2026-11-21 07:15:27.653488+00, 2026-11-21 07:15:27.653488+00, null).
+2026-11-21 07:15:47,338 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 50, in create_version
+    version = await service.create_doc_version(form.validated())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_version_service.py", line 40, in create_doc_version
+    version = await self.version.create_doc_version(payload)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_version_repository.py", line 21, in create_doc_version
+    return await self.model.create(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 1641, in create
+    row = await cls.query().insert_returning(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 655, in insert_returning
+    return await self.builder.insert_returning(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1416, in insert_returning
+    row = await conn.fetchrow(sql, *values)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 775, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 197, in bind_execute
+asyncpg.exceptions.NotNullViolationError: null value in column "sort_order" of relation "doc_versions" violates not-null constraint
+DETAIL:  Failing row contains (6, 1.x.x.7, version-1.x.x.8, This is the first version coo, t, 1, 2026-11-21 07:15:47.335207+00, 2026-11-21 07:15:47.335207+00, null).
+2026-11-21 07:38:46,042 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Base64 decoding failed: Incorrect padding
+2026-11-21 07:38:54,241 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/versions/7/update: The given data was invalid.
+2026-11-21 07:39:16,413 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 65, in update_version
+    version = await service.update_doc_version(version_id, form.validated())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_version_service.py", line 44, in update_doc_version
+    if version.name == data.get("version") and version.id != version_id:
+       ^^^^^^^^^^^^
+AttributeError: 'DocVersion' object has no attribute 'name'
+2026-11-21 07:42:53,723 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "asyncpg/protocol/prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg/protocol/codecs/base.pyx", line 251, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg/protocol/codecs/base.pyx", line 153, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg/pgproto/codecs/int.pyx", line 105, in asyncpg.pgproto.pgproto.int8_encode
+TypeError: 'str' object cannot be interpreted as an integer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 41, in get_version
+    version = await service.get_doc_version(version_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_version_service.py", line 20, in get_doc_version
+    version = await self.version.get_doc_version(version_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_version_repository.py", line 15, in get_doc_version
+    return await self.model.with_("groups").where("id", version_id).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 430, in first
+    res = await self.clone().limit(1).get()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 417, in get
+    rows = await self.builder.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1192, in get
+    rows = await conn.fetch(sql, *bindings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 717, in fetch
+    return await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 176, in bind_execute
+  File "asyncpg/protocol/prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: '7' ('str' object cannot be interpreted as an integer)
+2026-11-21 07:43:40,455 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "asyncpg/protocol/prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg/protocol/codecs/base.pyx", line 251, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg/protocol/codecs/base.pyx", line 153, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg/pgproto/codecs/int.pyx", line 105, in asyncpg.pgproto.pgproto.int8_encode
+TypeError: 'str' object cannot be interpreted as an integer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 41, in get_version
+    version = await service.get_doc_version(version_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_version_service.py", line 20, in get_doc_version
+    version = await self.version.get_doc_version(version_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_version_repository.py", line 15, in get_doc_version
+    return await self.model.with_("groups").where("id", version_id).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 430, in first
+    res = await self.clone().limit(1).get()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 417, in get
+    rows = await self.builder.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1192, in get
+    rows = await conn.fetch(sql, *bindings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 717, in fetch
+    return await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 176, in bind_execute
+  File "asyncpg/protocol/prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: '7' ('str' object cannot be interpreted as an integer)
+2026-11-21 07:47:13,394 [INFO] swiftpy.core.exceptions: HTTP 404 GET /v1/admin/docs/versions/7: DocVersion not found
+2026-11-21 08:56:51,736 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-21 09:13:17,209 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-21 09:24:00,543 [INFO] swiftpy.core.exceptions: HTTP 405 PUT /v1/admin/docs/groups/update: Method 'PUT' not allowed for path '/v1/admin/docs/groups/update'. Allowed: GET, HEAD
+2026-11-21 09:26:23,716 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 124, in update_group
+    group = await service.update_doc_group(group_id, form.validated())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 34, in update_doc_group
+    group.parent_id = data.parent_id
+                      ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'parent_id'
+2026-11-21 09:27:28,007 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 124, in update_group
+    group = await service.update_doc_group(group_id, form.validated())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 34, in update_doc_group
+    group.parent_id = data.parent_id if data.parent_id is not None else group.parent_id
+                                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'parent_id'
+2026-11-21 09:31:50,437 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 124, in update_group
+    group = await service.update_doc_group(group_id, form.validated())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 31, in update_doc_group
+    if data.parent_id:
+       ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'parent_id'
+2026-11-21 09:32:32,982 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 124, in update_group
+    group = await service.update_doc_group(group_id, form.validated())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 31, in update_doc_group
+    if data.parent_id is not None:
+       ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'parent_id'
+2026-11-21 09:32:55,575 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 124, in update_group
+    group = await service.update_doc_group(group_id, form.validated())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 31, in update_doc_group
+    if data['parent_id'] is not None:
+       ~~~~^^^^^^^^^^^^^
+KeyError: 'parent_id'
+2026-11-21 09:34:57,894 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 124, in update_group
+    group = await service.update_doc_group(group_id, form.validated())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 42, in update_doc_group
+    group.image = data.image
+                  ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'image'
+2026-11-21 09:40:10,421 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 124, in update_group
+    group = await service.update_doc_group(group_id, form.validated())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 42, in update_doc_group
+    group.image = data.image
+                  ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'image'
+2026-11-21 09:44:32,627 [INFO] swiftpy.core.exceptions: HTTP 422 POST /v1/admin/docs/groups/create: The given data was invalid.
+2026-11-21 09:45:40,071 [INFO] swiftpy.core.exceptions: HTTP 422 POST /v1/admin/docs/groups/create: The given data was invalid.
+2026-11-21 09:46:07,558 [INFO] swiftpy.core.exceptions: HTTP 422 POST /v1/admin/docs/groups/create: The given data was invalid.
+2026-11-21 09:46:22,724 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 108, in create_group
+    return await request.name
+                 ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/http/request.py", line 476, in __getattr__
+    raise AttributeError(
+AttributeError: 'Request' object has no attribute 'name'
+2026-11-21 09:48:30,663 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 834, in dispatched_handler
+    raise TypeError(
+TypeError: Route handler must return a Response, dict, or list, got str
+2026-11-21 09:50:40,557 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 130, in update_group
+    group = await service.update_doc_group(group_id, form.validated(), image)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 45, in update_doc_group
+    await group.save()
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 1702, in save
+    await self.__class__.query().where(pk_name, pk).update(changed)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 676, in update
+    return await self.builder.update(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1489, in update
+    result = await conn.execute(sql, *bindings)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 197, in bind_execute
+asyncpg.exceptions.UniqueViolationError: duplicate key value violates unique constraint "doc_groups_name_key"
+DETAIL:  Key (name)=(Get Started yyy) already exists.
+2026-11-21 09:57:01,989 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 130, in update_group
+    group = await service.update_doc_group(group_id, form.validated(), image)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 45, in update_doc_group
+    await group.save()
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 1702, in save
+    await self.__class__.query().where(pk_name, pk).update(changed)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 676, in update
+    return await self.builder.update(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1489, in update
+    result = await conn.execute(sql, *bindings)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 197, in bind_execute
+asyncpg.exceptions.UniqueViolationError: duplicate key value violates unique constraint "doc_groups_name_key"
+DETAIL:  Key (name)=(Get Started yyy) already exists.
+2026-11-21 09:57:39,278 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 94, in groups
+    groups = await service.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 24, in get_doc_groups
+    groups = await self.repo.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 20, in get_doc_groups
+    return await self.model.with_('author', 'group', 'docs').order_by('sort_order').get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 425, in get
+    await self._load_relations(instances)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 701, in _load_relations
+    raise ValueError(
+ValueError: Relation 'group' not found on model DocGroup
+2026-11-21 10:00:53,036 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 94, in groups
+    groups = await service.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 24, in get_doc_groups
+    groups = await self.repo.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 20, in get_doc_groups
+    return await self.model.with_('author', 'group', 'docs').order_by('sort_order').get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 425, in get
+    await self._load_relations(instances)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 701, in _load_relations
+    raise ValueError(
+ValueError: Relation 'group' not found on model DocGroup
+2026-11-21 10:01:37,665 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 94, in groups
+    groups = await service.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 24, in get_doc_groups
+    groups = await self.repo.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 20, in get_doc_groups
+    return await self.model.with_('author', 'group', 'docs').order_by('sort_order').get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 425, in get
+    await self._load_relations(instances)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 701, in _load_relations
+    raise ValueError(
+ValueError: Relation 'group' not found on model DocGroup
+2026-11-21 10:01:42,646 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 94, in groups
+    groups = await service.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 24, in get_doc_groups
+    groups = await self.repo.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 20, in get_doc_groups
+    return await self.model.with_('author', 'group', 'docs').order_by('sort_order').get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 425, in get
+    await self._load_relations(instances)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 701, in _load_relations
+    raise ValueError(
+ValueError: Relation 'group' not found on model DocGroup
+2026-11-21 10:01:58,627 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 94, in groups
+    groups = await service.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 24, in get_doc_groups
+    groups = await self.repo.get_doc_groups()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 20, in get_doc_groups
+    return await self.model.with_('author', 'group', 'docs').order_by('sort_order').get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 425, in get
+    await self._load_relations(instances)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 701, in _load_relations
+    raise ValueError(
+ValueError: Relation 'group' not found on model DocGroup
+2026-11-21 10:07:04,891 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 130, in update_group
+    group = await service.update_doc_group(group_id, form.validated(), image)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 82, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 45, in update_doc_group
+    await group.save()
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 1702, in save
+    await self.__class__.query().where(pk_name, pk).update(changed)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 676, in update
+    return await self.builder.update(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1489, in update
+    result = await conn.execute(sql, *bindings)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 197, in bind_execute
+asyncpg.exceptions.UniqueViolationError: duplicate key value violates unique constraint "doc_groups_name_key"
+DETAIL:  Key (name)=(Get Started yyy) already exists.
+2026-11-21 10:17:49,890 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-21 10:18:18,761 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/groups/1/update: The given data was invalid.
+2026-11-21 10:18:57,516 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/groups/1/update: The given data was invalid.
+2026-11-21 10:20:49,892 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 130, in update_group
+    group = await service.update_doc_group(group_id, form.validated(), image)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_group_service.py", line 76, in update_doc_group
+    group = await self.repo.update_doc_group(group_id, data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_group_repository.py", line 45, in update_doc_group
+    await group.save()
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 1702, in save
+    await self.__class__.query().where(pk_name, pk).update(changed)
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 676, in update
+    return await self.builder.update(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1489, in update
+    result = await conn.execute(sql, *bindings)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 380, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 197, in bind_execute
+asyncpg.exceptions.UniqueViolationError: duplicate key value violates unique constraint "doc_groups_slug_key"
+DETAIL:  Key (slug)=(get-startediuuy) already exists.
+2026-11-21 10:21:45,957 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/groups/1/update: The given data was invalid.
+2026-11-21 10:34:50,079 [INFO] swiftpy.core.exceptions: HTTP 405 POST /v1/admin/docs/contents/1/update: Method 'POST' not allowed for path '/v1/admin/docs/contents/1/update'. Allowed: PUT
+2026-11-21 10:34:58,464 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/contents/1/update: The given data was invalid.
+2026-11-21 10:35:12,271 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/contents/1/update: The given data was invalid.
+2026-11-21 10:35:21,026 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 178, in update_doc
+    doc = await service.update_doc(doc_id, form.validated())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_service.py", line 61, in update_doc
+    doc = await self.repo.update_doc(doc_id, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_repository.py", line 30, in update_doc
+    doc.name = data.name
+               ^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'name'
+2026-11-21 10:36:37,038 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 178, in update_doc
+    doc = await service.update_doc(doc_id, form.validated())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_service.py", line 61, in update_doc
+    doc = await self.repo.update_doc(doc_id, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_repository.py", line 32, in update_doc
+    doc.doc_version_id = data.doc_version_id
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'doc_version_id'
+2026-11-21 10:40:42,094 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 178, in update_doc
+    doc = await service.update_doc(doc_id, form.validated())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_service.py", line 65, in update_doc
+    doc = await self.repo.update_doc(doc_id, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_repository.py", line 34, in update_doc
+    doc.description = data.description
+                      ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'description'
+2026-11-21 10:41:34,321 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 178, in update_doc
+    doc = await service.update_doc(doc_id, form.validated())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_service.py", line 65, in update_doc
+    doc = await self.repo.update_doc(doc_id, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_repository.py", line 35, in update_doc
+    doc.sort_order = data.sort_order if data.sort_order is not None else doc.sort_order
+                                        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'sort_order'
+2026-11-21 10:49:34,735 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 178, in update_doc
+    doc = await service.update_doc(doc_id, form.validated())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_service.py", line 65, in update_doc
+    doc = await self.repo.update_doc(doc_id, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_repository.py", line 35, in update_doc
+    doc.sort_order = data.sort_order if data.sort_order is not None else doc.sort_order
+                                        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/validation/validator.py", line 148, in __getattr__
+    raise AttributeError(
+AttributeError: 'ValidatedData' object has no attribute 'sort_order'
+2026-11-21 10:51:55,564 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/admin.py", line 164, in create_doc
+    doc = await service.create_doc(form.validated())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/admin/doc_service.py", line 43, in create_doc
+    group = await self.repo.create_doc(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/repositories/admin/doc_repository.py", line 23, in create_doc
+    return await self.model.create(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 1641, in create
+    row = await cls.query().insert_returning(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/orm/model.py", line 655, in insert_returning
+    return await self.builder.insert_returning(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/database/query_builder.py", line 1416, in insert_returning
+    row = await conn.fetchrow(sql, *values)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 775, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 1904, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2003, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asyncpg/connection.py", line 2069, in _do_execute
+    result = await executor(stmt, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 197, in bind_execute
+asyncpg.exceptions.NotNullViolationError: null value in column "doc_version_id" of relation "docs" violates not-null constraint
+DETAIL:  Failing row contains (2, Installation, installation, null, 2,  This is the first version, t, 1, 2026-11-21 10:51:55.430286+00, 2026-11-21 10:51:55.430286+00, 0).
+2026-11-21 12:20:13,125 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 824, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 31, in refresh
+    tokens = await jwt.refresh_token_pair(payload.refresh_token, rotate=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/auth/jwt_issuer.py", line 519, in refresh_token_pair
+    payload = self.decode_token(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/auth/jwt_issuer.py", line 633, in decode_token
+    raise InvalidTokenError(
+swiftpy.auth.exceptions.InvalidTokenError: Invalid token format: expected 3 segments separated by dots, got 1
+2026-11-21 13:21:54,231 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired

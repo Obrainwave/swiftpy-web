@@ -31,6 +31,20 @@ function processQueue(error: unknown, token: string | null): void {
   failedQueue = [];
 }
 
+function isAdminClaimDenied(error: AxiosError): boolean {
+  if (error.response?.status !== 403) return false;
+
+  const body = error.response.data;
+  if (typeof body !== "object" || body === null) return false;
+
+  const responseBody = body as Record<string, unknown>;
+  const message = responseBody.message ?? responseBody.detail;
+  return (
+    typeof message === "string" &&
+    message.includes("Administrator access required")
+  );
+}
+
 // ─── Request interceptor — attach access token ────────────────────────────────
 
 apiClient.interceptors.request.use(
@@ -51,9 +65,18 @@ apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,
   async (error: AxiosError) => {
     const originalRequest = error.config as RetryableConfig | undefined;
+    const isAdminPermissionError = isAdminClaimDenied(error);
 
-    // Only attempt a refresh on 401 responses.
-    if (!error.response || error.response.status !== 401 || !originalRequest) {
+    // Refresh on expired access tokens and the backend's explicit stale-admin-claim response.
+    if (
+      !error.response ||
+      (error.response.status !== 401 && !isAdminPermissionError) ||
+      !originalRequest
+    ) {
+      return Promise.reject(error);
+    }
+
+    if (isAdminPermissionError && !useAuthStore.getState().refreshToken) {
       return Promise.reject(error);
     }
 
@@ -74,6 +97,7 @@ apiClient.interceptors.response.use(
 
     if (isRefreshing) {
       // Another refresh is already in flight — queue this request.
+      originalRequest._retry = true;
       return new Promise<AxiosResponse>((resolve, reject) => {
         failedQueue.push({
           resolve: (newToken: string) => {
@@ -108,8 +132,7 @@ apiClient.interceptors.response.use(
       const newAccess = response.data.access_token;
       const newRefresh = response.data.refresh_token;
 
-      // Update store with new tokens.
-      store.setTokens(newAccess, newRefresh);
+      store.setSession(response.data.user, newAccess, newRefresh);
 
       // Retry all queued requests with the new token.
       processQueue(null, newAccess);

@@ -14,8 +14,12 @@ export interface GradientButtonProps extends React.ButtonHTMLAttributes<HTMLButt
 
 const roundedStyles = {
   full: "rounded-full",
+  "2xl": "rounded-2xl",
+  "3xl": "rounded-3xl",
+  xl: "rounded-xl",
+  lg: "rounded-lg",
   md: "rounded-md",
-  sm: "rounded-xs",
+  sm: "rounded-sm",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -38,9 +42,8 @@ export function GradientButton({
 }: GradientButtonProps) {
   const baseClasses =
     `flex-row items-center justify-center gap-1 ${roundedStyles[rounded]} bg-gradient-to-r from-primary via-[#f03b05] to-secondary text-white font-semibold shadow-md hover:shadow-lg hover:brightness-105 active:brightness-95 transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none font-sans`;
-  const combinedClasses = `${baseClasses} ${sizeStyles[size]} ${
-    fullWidth ? "w-full" : ""
-  } ${className}`;
+  const combinedClasses = `${baseClasses} ${sizeStyles[size]} ${fullWidth ? "w-full" : ""
+    } ${className}`;
 
   if (href) {
     return (

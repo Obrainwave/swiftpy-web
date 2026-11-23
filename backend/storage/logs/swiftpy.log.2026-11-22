@@ -1,0 +1,374 @@
+2026-11-22 13:53:15,134 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-22 13:53:15,370 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:53:16,323 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:53:18,186 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:53:24,621 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:54:17,601 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:54:18,684 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:54:20,740 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:54:25,051 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:56:22,816 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:56:28,673 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:58:42,344 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:58:52,729 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:59:27,108 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:59:28,268 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:59:31,603 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 13:59:35,763 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:01:06,183 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:01:15,098 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:02:28,240 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:05:14,671 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:05:16,870 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:05:20,913 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:06:22,284 [INFO] swiftpy.core.exceptions: HTTP 403 POST /v1/admin/docs/versions/create: Forbidden: Administrator access required
+2026-11-22 14:06:37,208 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:06:43,042 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:06:45,555 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:06:49,972 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:06:58,528 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:05,159 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:07,020 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:11,702 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:12,660 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:14,512 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:18,206 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:52,400 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:53,356 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:55,232 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:09:58,943 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:10:08,291 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:10:09,271 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:10:11,142 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:10:14,874 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:10:26,759 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:10:27,733 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:10:29,613 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:14,014 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:15,092 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:17,129 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:44,574 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:47,342 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:49,288 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:52,683 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:53,676 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:32:55,601 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:33:06,856 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:33:09,614 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:33:10,364 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:33:16,346 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:33:17,330 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:33:19,202 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:33:32,439 [INFO] swiftpy.core.exceptions: HTTP 401 POST /v1/api/auth/login: Incorrect email or password provided
+2026-11-22 14:33:43,380 [INFO] swiftpy.core.exceptions: HTTP 401 POST /v1/api/auth/login: Incorrect email or password provided
+2026-11-22 14:37:59,518 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:38:00,525 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:38:02,489 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:39:38,350 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:39:40,850 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:39:49,368 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:40:20,344 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:40:24,111 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:40:26,614 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:40:30,300 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:40:52,192 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:40:53,423 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:15,154 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:16,920 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:18,959 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:17,376 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:25,930 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:27,052 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:28,922 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:32,625 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:41:38,008 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:44:48,960 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:44:51,011 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:44:58,924 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:47:16,703 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:47:21,146 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:47:43,179 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:47:47,895 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:47:49,419 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:47:58,149 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:00,321 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:03,499 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:16,433 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:19,421 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:20,523 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:22,446 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:40,017 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:48:51,381 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:49:06,215 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:49:11,457 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:49:20,076 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:49:21,784 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:49:24,241 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:49:28,407 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:50:07,172 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:50:08,258 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:50:10,228 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:50:14,218 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:50:41,545 [ERROR] swiftpy.auth.jwt: Authentication service unavailable: Redis blacklist check failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 1286, in read_response
+    response = await self._read_response_from_parser(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 1335, in _read_response_from_parser
+    return await self._parser.read_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 185, in read_response
+    response = await self._read_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/_parsers/resp3.py", line 197, in _read_response
+    raw = await self._readline()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/_parsers/base.py", line 587, in _readline
+    data = await self._stream.readline()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/streams.py", line 568, in readline
+    line = await self.readuntil(sep)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/streams.py", line 660, in readuntil
+    await self._wait_for_data('readuntil')
+  File "/usr/local/lib/python3.12/asyncio/streams.py", line 545, in _wait_for_data
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 1283, in read_response
+    async with timeout_context as active_timeout:
+               ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/auth/jwt_guard.py", line 161, in require_jwt
+    is_rev = await active_blacklist.is_revoked(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/auth/token_blacklist.py", line 272, in is_revoked
+    results = await pipe.execute()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/client.py", line 2262, in execute
+    response = await conn.retry.call_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/retry.py", line 81, in call_with_retry
+    raise error
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/retry.py", line 69, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/client.py", line 2045, in _execute_transaction
+    await self.parse_response(connection, "_")
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/client.py", line 2167, in parse_response
+    result = await super().parse_response(connection, command_name, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/client.py", line 993, in parse_response
+    response = await connection.read_response()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 1310, in read_response
+    raise TimeoutError(f"Timeout reading from {host_error}")
+redis.exceptions.TimeoutError: Timeout reading from redis:6379
+2026-11-22 14:51:00,779 [ERROR] swiftpy.auth.jwt: Authentication service unavailable: Redis blacklist check failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 1487, in _connect
+    reader, writer = await asyncio.open_connection(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1976, in create_connection
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 464, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 550, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 850, in connect_check_health
+    await self._connect()
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 1486, in _connect
+    async with async_timeout(self.socket_connect_timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/auth/jwt_guard.py", line 161, in require_jwt
+    is_rev = await active_blacklist.is_revoked(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/auth/token_blacklist.py", line 272, in is_revoked
+    results = await pipe.execute()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/client.py", line 2243, in execute
+    conn = await self.connection_pool.get_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/utils.py", line 249, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 2824, in get_connection
+    await self.ensure_connection(connection)
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 2865, in ensure_connection
+    await connection.connect()
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 819, in connect
+    await self.retry.call_with_retry(
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/retry.py", line 81, in call_with_retry
+    raise error
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/retry.py", line 69, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/redis/asyncio/connection.py", line 864, in connect_check_health
+    raise e
+redis.exceptions.TimeoutError: Timeout connecting to server
+2026-11-22 14:51:14,681 [WARNING] swiftpy.database.pool: Database pool close timed out after 5.00s; terminating active connections.
+2026-11-22 14:56:56,534 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 14:56:56,711 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/groups: Forbidden: Administrator access required
+2026-11-22 15:03:22,990 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/groups/2/update: The given data was invalid.
+2026-11-22 15:04:10,064 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/groups/2/update: The given data was invalid.
+2026-11-22 15:05:31,018 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/groups/2/update: The given data was invalid.
+2026-11-22 15:06:45,057 [INFO] swiftpy.core.exceptions: HTTP 403 GET /v1/admin/docs/versions: Forbidden: Administrator access required
+2026-11-22 18:41:44,774 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 919, in dispatched_handler
+    res = await handler(controller_instance, **call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/http/controllers/admin/account_controller.py", line 17, in profile
+    admin = await auth().user()
+            ^^^^^^^^^^^^^^^^^^^
+TypeError: object AuthUser can't be used in 'await' expression
+2026-11-22 18:46:20,886 [INFO] swiftpy.core.exceptions: HTTP 401 POST /v1/api/auth/refresh: Invalid refresh token.
+2026-11-22 18:46:35,965 [INFO] swiftpy.core.exceptions: HTTP 401 POST /v1/api/auth/refresh: Invalid refresh token.
+2026-11-22 18:47:14,759 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 58, in refresh
+    user = await self.users.find_by_id(user.id)
+                                       ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-11-22 18:48:04,990 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 58, in refresh
+    user = await self.users.find_by_id(user.id())
+                                       ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2026-11-22 18:52:28,752 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AuthService.refresh() missing 1 required positional argument: 'jwt'
+2026-11-22 18:52:48,783 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 72, in refresh
+    tokens = await JWTIssuer.refresh_token_pair(refresh_token, rotate=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: JWTIssuer.refresh_token_pair() missing 1 required positional argument: 'refresh_token'
+2026-11-22 18:53:36,167 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 72, in refresh
+    tokens = await JWTIssuer.refresh_token_pair(refresh_token=refresh_token, rotate=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: JWTIssuer.refresh_token_pair() missing 1 required positional argument: 'self'
+2026-11-22 18:56:49,532 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 72, in refresh
+    tokens = await JWTIssuer.refresh_token_pair(refresh_token=refresh_token, rotate=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: JWTIssuer.refresh_token_pair() missing 1 required positional argument: 'self'
+2026-11-22 19:34:28,765 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-22 19:34:28,908 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-22 19:34:29,159 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 72, in refresh
+    tokens = await JWTIssuer.refresh_token_pair(refresh_token=refresh_token, rotate=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: JWTIssuer.refresh_token_pair() missing 1 required positional argument: 'self'
+2026-11-22 20:16:06,864 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/contents/3/update: The given data was invalid.
+2026-11-22 20:17:05,998 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/versions/2/update: The given data was invalid.
+2026-11-22 20:21:39,724 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 72, in refresh
+    tokens = await JWTIssuer.refresh_token_pair(refresh_token=refresh_token, rotate=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: JWTIssuer.refresh_token_pair() missing 1 required positional argument: 'self'
+2026-11-22 20:21:58,913 [INFO] swiftpy.core.exceptions: HTTP 422 PUT /v1/admin/docs/versions/2/update: The given data was invalid.
+2026-11-22 20:24:00,758 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 72, in refresh
+    tokens = await JWTIssuer.refresh_token_pair(refresh_token=refresh_token, rotate=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: JWTIssuer.refresh_token_pair() missing 1 required positional argument: 'self'
+2026-11-22 21:43:42,565 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-22 21:45:08,112 [WARNING] swiftpy.auth.jwt: JWT authentication failed: Token has expired
+2026-11-22 21:45:08,174 [ERROR] swiftpy.core.exceptions: Unhandled exception during request processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/swiftpy/core/application.py", line 926, in dispatched_handler
+    res = await handler(**call_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routes/api.py", line 30, in refresh
+    data = await service.refresh(payload.refresh_token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/auth_service.py", line 72, in refresh
+    tokens = await JWTIssuer.refresh_token_pair(refresh_token=refresh_token, rotate=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: JWTIssuer.refresh_token_pair() missing 1 required positional argument: 'self'

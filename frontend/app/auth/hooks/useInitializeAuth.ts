@@ -6,6 +6,18 @@ import { refreshTokenApi } from "../api/auth.api";
 import useAuthStore from "../stores/auth.store";
 import type { AuthUser } from "../types/auth.types";
 
+function isAuthUser(value: unknown): value is AuthUser {
+  if (typeof value !== "object" || value === null) return false;
+
+  const user = value as Record<string, unknown>;
+  return (
+    typeof user.id === "number" &&
+    typeof user.name === "string" &&
+    typeof user.email === "string" &&
+    typeof user.is_admin === "boolean"
+  );
+}
+
 export const useInitializeAuth = (): void => {
   const initialized = useRef(false);
   const isInitialized = useAuthStore((s) => s.isInitialized);
@@ -26,10 +38,19 @@ export const useInitializeAuth = (): void => {
         const refreshToken = localStorage.getItem("swiftpy_refresh_token");
         const storedUser = localStorage.getItem("swiftpy_user");
 
-        if (!refreshToken || !storedUser) return;
+        if (!refreshToken) return;
 
-        const user = JSON.parse(storedUser) as AuthUser;
+        const cachedUser: unknown = storedUser ? JSON.parse(storedUser) : null;
         const tokens = await refreshSession(refreshToken);
+        const user =
+          tokens.user && isAuthUser(tokens.user)
+            ? tokens.user
+            : isAuthUser(cachedUser)
+              ? cachedUser
+              : null;
+
+        if (!user) throw new Error("Unable to restore the authenticated user.");
+
         setSession(user, tokens.access_token, tokens.refresh_token);
       } catch {
         clearAuth();
